@@ -16,8 +16,8 @@ namespace Andromeda.AI
         private new void Start()
         {
             // Get the starbase
-            _target = GameObject.FindGameObjectWithTag("Starbase").transform;
-            _starbase = _target.GetComponent<Starbase>();
+            _starbase = GameObject.FindGameObjectWithTag("Starbase").GetComponent<Starbase>();
+            _target = _starbase.GetNextFreeSlot();
 
             // Find rotation
             transform.rotation = Quaternion.LookRotation(Vector3.forward, _target.position - transform.position);
@@ -29,7 +29,15 @@ namespace Andromeda.AI
             base.Update();
 
             // Move towards
-            Vector2 targetDir = _target.position - transform.position;
+            Vector2 targetDir = _starbase.transform.position - transform.position;
+
+            // Rotate towards
+            float dot = Vector2.Dot(transform.right, targetDir) + 0.5f;
+            if (Mathf.Abs(dot) > float.Epsilon)
+            {
+                actions.Enqueue(new Rotate(-dot));
+            }
+
             if (Mathf.Abs(targetDir.magnitude) >= 10f)
             {
                 actions.Enqueue(new Thrust());

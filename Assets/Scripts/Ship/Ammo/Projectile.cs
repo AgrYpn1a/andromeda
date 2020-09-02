@@ -56,8 +56,11 @@ namespace Andromeda.Ship.Ammo
         {
             _dir = direction;
             IsActive = true;
+        }
 
-
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            Destroy(this.gameObject);
         }
     }
 }

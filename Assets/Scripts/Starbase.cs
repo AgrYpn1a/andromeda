@@ -9,6 +9,8 @@ namespace Andromeda
     {
         [SerializeField]
         private Transform _attackSlots;
+        [SerializeField]
+        private int _hitPoints;
 
         public bool HasFreeAttackSlots()
         {
