@@ -7,6 +7,8 @@ namespace Andromeda.Ship.Ammo
 
     public enum AmmoType
     {
-        DEFAULT
+        DEFAULT,
+        DEFAULT_AI,
+        ROCKET
     }
 }

@@ -8,20 +8,9 @@ using UnityEngine;
 namespace Andromeda
 {
 
-    [System.Serializable]
-    public class Actor
-    {
-        public int HitPoints;
-        public float ThrustPower;
-        public float RotationCoef;
-    }
-
     [RequireComponent(typeof(Collider2D))]
     public sealed class PlayerController : ShipController
     {
-        [SerializeField]
-        private Actor playerActor;
-
         // Called once only
         private new void Start()
         {
@@ -45,7 +34,7 @@ namespace Andromeda
                 var action = inputs.Dequeue();
                 if (!action.IsPhysics)
                 {
-                    action.Execute(this, actor);
+                    action.Execute(this, _actor);
                 }
                 else
                 {

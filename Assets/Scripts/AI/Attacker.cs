@@ -9,12 +9,13 @@ namespace Andromeda.AI
 
     public sealed class Attacker : AIController
     {
-
         private Transform _targetPos;
         private Starbase _starbase;
 
         private new void Start()
         {
+            base.Start();
+
             // Get the starbase
             _starbase = GameObject.FindGameObjectWithTag("Starbase").GetComponent<Starbase>();
             _target = _starbase.GetNextFreeSlot();
@@ -22,6 +23,15 @@ namespace Andromeda.AI
             // Find rotation
             transform.rotation = Quaternion.LookRotation(Vector3.forward, _target.position - transform.position);
         }
+
+        const float fireRate = 1.5f;
+        private float _lastFire = 0f;
+
+        private Vector2[] _guns =
+        {
+            Vector3.up * 1.2f + Vector3.right * 0.5f,
+            Vector3.up * 1.2f - Vector3.right * 0.5f,
+        };
 
         // Update is called once per frame
         private new void Update()
@@ -38,9 +48,18 @@ namespace Andromeda.AI
                 actions.Enqueue(new Rotate(-dot));
             }
 
-            if (Mathf.Abs(targetDir.magnitude) >= 10f)
+            if (targetDir.magnitude >= 15f)
             {
                 actions.Enqueue(new Thrust());
+            }
+            else
+            {
+                // Close enough to shoot
+                if (Time.time - _lastFire > fireRate)
+                {
+                    _lastFire = Time.time;
+                    actions.Enqueue(new AIShoot(Ship.Ammo.AmmoType.ROCKET, _guns));
+                }
             }
         }
     }

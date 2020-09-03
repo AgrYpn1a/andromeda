@@ -5201,13 +5201,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6cc6ed6fc57924d893ccbd6f485066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 1906800641082229480, guid: 5847681f684ab6a45abafa1ccfb882f3,
     type: 3}
   shipMass: 10
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 3
   maxRotation: 5
 --- !u!58 &120102134
@@ -5293,12 +5290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c0ca013acd36f47834f5ab53c0d9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 0}
   shipMass: 3
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 1.4
   maxRotation: 3
 --- !u!61 &149702717
@@ -5430,13 +5424,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6cc6ed6fc57924d893ccbd6f485066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 1906800641082229480, guid: 5847681f684ab6a45abafa1ccfb882f3,
     type: 3}
   shipMass: 10
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 3
   maxRotation: 5
 --- !u!58 &195566564
@@ -5489,7 +5480,7 @@ Transform:
   m_Children:
   - {fileID: 1459134618}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &225080187
 GameObject:
@@ -5570,7 +5561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &311283128
 GameObject:
@@ -5717,7 +5708,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &415338751
 GameObject:
@@ -5843,7 +5834,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &457241242
 MonoBehaviour:
@@ -5860,6 +5851,12 @@ MonoBehaviour:
   _types:
   - type: 0
     prefab: {fileID: 1096242267818093874, guid: ac8c08f674dbae64e9e223e2aaa9265c,
+      type: 3}
+  - type: 1
+    prefab: {fileID: 1096242267818093874, guid: b2103cb6e26e58545b69a33b1ff66dd4,
+      type: 3}
+  - type: 2
+    prefab: {fileID: 7139373012009819561, guid: bdee2985e0b4f2b4da2fe42e3ffde74d,
       type: 3}
 --- !u!114 &457241243
 MonoBehaviour:
@@ -5907,8 +5904,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -11.49, y: -0.73}
-  m_SizeDelta: {x: -32.987274, y: -1.4569302}
+  m_AnchoredPosition: {x: -11.243, y: -0.73}
+  m_SizeDelta: {x: -36.35446, y: -1.4569302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &474844927
 GameObject:
@@ -6119,7 +6116,7 @@ Transform:
   m_Children:
   - {fileID: 1622103976}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &522534818
 GameObject:
@@ -6810,13 +6807,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6cc6ed6fc57924d893ccbd6f485066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 1906800641082229480, guid: 5847681f684ab6a45abafa1ccfb882f3,
     type: 3}
   shipMass: 10
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 3
   maxRotation: 5
 --- !u!58 &975495771
@@ -6869,7 +6863,7 @@ Transform:
   m_Children:
   - {fileID: 1588642837}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &983250970
 GameObject:
@@ -6979,7 +6973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10.600014, y: 0.6899996}
+  m_AnchoredPosition: {x: 10.600006, y: 0.6899996}
   m_SizeDelta: {x: -28.210365, y: -10.670807}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009102250
@@ -11831,7 +11825,7 @@ Transform:
   - {fileID: 113139902}
   - {fileID: 1558797875}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1057240357
 GameObject:
@@ -11882,7 +11876,7 @@ Transform:
   - {fileID: 1234960373}
   - {fileID: 503197416}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1057240360
 Rigidbody2D:
@@ -11917,6 +11911,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9045feab2c0fd624bb65fda91fad953b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
+  destroyedParticles: {fileID: 0}
+  shipMass: 3
+  maxVelocity: 1.4
+  maxRotation: 3
   _attackSlots: {fileID: 503197416}
   _hitPoints: 0
 --- !u!1 &1072267370
@@ -12028,7 +12027,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140344447
 GameObject:
@@ -12598,13 +12597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6cc6ed6fc57924d893ccbd6f485066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 1906800641082229480, guid: 5847681f684ab6a45abafa1ccfb882f3,
     type: 3}
   shipMass: 10
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 3
   maxRotation: 5
 --- !u!58 &1239642514
@@ -12738,7 +12734,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1277756922
 GameObject:
@@ -13119,13 +13115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6cc6ed6fc57924d893ccbd6f485066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 1906800641082229480, guid: 5847681f684ab6a45abafa1ccfb882f3,
     type: 3}
   shipMass: 10
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 3
   maxRotation: 5
 --- !u!58 &1465363754
@@ -13346,7 +13339,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.77
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -18450,12 +18443,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c0ca013acd36f47834f5ab53c0d9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 0}
   shipMass: 3
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 1.4
   maxRotation: 3
 --- !u!61 &1605502544
@@ -23386,13 +23376,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6cc6ed6fc57924d893ccbd6f485066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 1906800641082229480, guid: 5847681f684ab6a45abafa1ccfb882f3,
     type: 3}
   shipMass: 10
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 3
   maxRotation: 5
 --- !u!58 &1761922587
@@ -23479,7 +23466,7 @@ Transform:
   m_Children:
   - {fileID: 1205367810}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1762054220
 PolygonCollider2D:
@@ -23544,18 +23531,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1921316b767014d9ccce3151c35867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 0}
   shipMass: 5
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 5
   maxRotation: 3
-  playerActor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
 --- !u!1 &1860258513
 GameObject:
   m_ObjectHideFlags: 0
@@ -23676,12 +23656,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c0ca013acd36f47834f5ab53c0d9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 0}
   shipMass: 3
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 1.4
   maxRotation: 3
 --- !u!61 &1883532597
@@ -23777,13 +23754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6cc6ed6fc57924d893ccbd6f485066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: aeab60d56456484478aec015ca9f00c1, type: 2}
   destroyedParticles: {fileID: 1906800641082229480, guid: 5847681f684ab6a45abafa1ccfb882f3,
     type: 3}
   shipMass: 10
-  actor:
-    HitPoints: 0
-    ThrustPower: 0
-    RotationCoef: 0
   maxVelocity: 3
   maxRotation: 5
 --- !u!58 &1937845297
@@ -23836,7 +23810,7 @@ Transform:
   m_Children:
   - {fileID: 2041580796}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011891534
 GameObject:
@@ -23917,7 +23891,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2041580795
 GameObject:

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Andromeda
 {
 
-    public sealed class Starbase : MonoBehaviour
+    public sealed class Starbase : Ship.ShipController
     {
         [SerializeField]
         private Transform _attackSlots;

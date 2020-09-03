@@ -25,8 +25,15 @@ namespace Andromeda.Ship.Ammo
             _instances[AmmoType.DEFAULT] = new List<Projectile>();
             var type = _types.Find(t => t.type == AmmoType.DEFAULT);
 
-            Expand(AmmoType.DEFAULT, type, 100);
+            _instances[AmmoType.DEFAULT_AI] = new List<Projectile>();
+            var type2 = _types.Find(t => t.type == AmmoType.DEFAULT_AI);
 
+            _instances[AmmoType.ROCKET] = new List<Projectile>();
+            var type3 = _types.Find(t => t.type == AmmoType.ROCKET);
+
+            Expand(AmmoType.DEFAULT, type, 100);
+            Expand(AmmoType.DEFAULT_AI, type2, 200);
+            Expand(AmmoType.ROCKET, type3, 16);
         }
 
         private int _currProjectile = 0;

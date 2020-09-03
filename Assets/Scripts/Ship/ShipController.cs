@@ -7,18 +7,25 @@ namespace Andromeda.Ship
     [RequireComponent(typeof(Collider2D))]
     public class ShipController : MonoBehaviour
     {
+        public ActorConfig config;
+        protected Actor _actor;
+
         [SerializeField]
         protected GameObject destroyedParticles;
         [SerializeField]
         private float shipMass = 3f;
 
-        public Actor actor;
-
         public float maxVelocity = 1.4f;
         public float maxRotation = 3f;
 
+        public ShipController()
+        {
+        }
+
         protected void Start()
         {
+            _actor = new Actor(config);
+
             //GetComponent<Rigidbody2D>().useAutoMass = false;
             //GetComponent<Rigidbody2D>().mass = shipMass;
         }
@@ -67,7 +74,7 @@ namespace Andromeda.Ship
             while (actions.Count > 0)
             {
                 var action = actions.Dequeue();
-                action.Execute(this, actor);
+                action.Execute(this, _actor);
             }
         }
         #endregion
