@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2442383006819595624}
   m_Layer: 0
   m_Name: AmmoRocket
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702fc7ff674361341913174caae49421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 0}
+  _config: {fileID: 11400000, guid: 41cdf5d24f76ee24c84f8503e5fcc240, type: 2}
 --- !u!50 &7421196268195155825
 Rigidbody2D:
   serializedVersion: 4

@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Andromeda.Ship.Ammo;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,21 +15,25 @@ namespace Andromeda.Ship
         [SerializeField]
         protected GameObject destroyedParticles;
         [SerializeField]
+        protected GameObject hitParticles;
+
+        [SerializeField]
         private float shipMass = 3f;
 
         public float maxVelocity = 1.4f;
         public float maxRotation = 3f;
 
-        public ShipController()
-        {
-        }
+        protected Action OnDeath;
 
         protected void Start()
         {
             _actor = new Actor(config);
 
-            //GetComponent<Rigidbody2D>().useAutoMass = false;
-            //GetComponent<Rigidbody2D>().mass = shipMass;
+            if(hitParticles == null)
+            {
+                // Assign default
+                hitParticles = destroyedParticles;
+            }
         }
 
         public void AddThrust(Vector2 direction, float force)
@@ -48,19 +54,37 @@ namespace Andromeda.Ship
 
         protected void OnCollisionEnter2D(Collision2D collision)
         {
+            if (collision.gameObject.tag.Equals("Projectile"))
+            {
+                var ammo = collision.gameObject.GetComponent<Projectile>().GetAmmoConfig;
+                _actor.HitPoints -= ammo.Damage;
 
-            // TODO: avoid dynamic allocation
-            Instantiate(destroyedParticles, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
-
+                // Check death
+                if (_actor.HitPoints <= 0)
+                {
+                    // Died
+                    // TODO: avoid dynamic allocation
+                    if (OnDeath != null)
+                    {
+                        // Custom death event
+                        OnDeath();
+                    }
+                    else
+                    {
+                        // Default death event
+                        Instantiate(destroyedParticles, transform.position, Quaternion.identity);
+                        Destroy(this.gameObject);
+                    }
+                }
+                else
+                {
+                    Instantiate(hitParticles, transform.position, Quaternion.identity);
+                }
+            }
         }
 
         protected Queue<ACommand> actions = new Queue<ACommand>();
-
-        public void AddAction(ACommand action)
-        {
-            actions.Enqueue(action);
-        }
+        public void AddAction(ACommand action) => actions.Enqueue(action);
 
         /// <summary>
         /// Test code
@@ -68,9 +92,6 @@ namespace Andromeda.Ship
         #region Mono
         protected void FixedUpdate()
         {
-            //GetComponent<Rigidbody2D>().velocity = Vector2.MoveTowards(GetComponent<Rigidbody2D>().velocity, Vector2.zero, 2f * Time.fixedDeltaTime);
-            //GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity * 0.9f;
-
             while (actions.Count > 0)
             {
                 var action = actions.Dequeue();

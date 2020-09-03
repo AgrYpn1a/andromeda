@@ -38,6 +38,9 @@ namespace Andromeda.AI
         {
             base.Update();
 
+            // Target does not exist
+            if (!_starbase) return;
+
             // Move towards
             Vector2 targetDir = _starbase.transform.position - transform.position;
 

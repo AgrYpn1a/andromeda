@@ -6,7 +6,9 @@ namespace Andromeda.Ship.Ammo
 {
     public class Projectile : MonoBehaviour
     {
-        public AmmoConfig config;
+        [SerializeField]
+        private AmmoConfig _config;
+        public AmmoConfig GetAmmoConfig => _config;
 
         private bool _isActive = false;
         public bool IsActive

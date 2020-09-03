@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Andromeda
 {
@@ -10,7 +11,22 @@ namespace Andromeda
         [SerializeField]
         private Transform _attackSlots;
         [SerializeField]
-        private int _hitPoints;
+        private Slider _hpSlider;
+
+        private float _maxHp;
+
+        private new void Start()
+        {
+            base.Start();
+            _maxHp = _actor.HitPoints;
+            OnDeath = () =>
+            {
+                _isDead = true;
+                Instantiate(destroyedParticles, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+                GameManager.Instance.GameOver(1.5f);
+            };
+        }
 
         public bool HasFreeAttackSlots()
         {
@@ -36,6 +52,16 @@ namespace Andromeda
             }
 
             return slotTr;
+        }
+
+        private bool _isDead = false;
+
+        private new void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (_isDead) return;
+
+            base.OnCollisionEnter2D(collision);
+            _hpSlider.value = _actor.HitPoints / _maxHp;
         }
     }
 }

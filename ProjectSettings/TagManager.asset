@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Starbase
+  - Projectile
+  - Bullet
   layers:
   - Default
   - TransparentFX
