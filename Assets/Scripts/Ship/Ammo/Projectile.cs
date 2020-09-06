@@ -60,10 +60,9 @@ namespace Andromeda.Ship.Ammo
             IsActive = true;
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collider)
         {
             IsActive = false;
-            //Destroy(this.gameObject);
         }
     }
 }

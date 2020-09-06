@@ -29,13 +29,7 @@ namespace Andromeda
             InputManager.Instance.InputMap[KeyCode.LeftControl] = new Shoot(AmmoType.DEFAULT,
                 new Vector2[]
                 {
-                    Vector3.up * 1.2f
-                });
-
-            InputManager.Instance.InputMap[KeyCode.RightControl] = new Shoot(AmmoType.DEFAULT,
-                new Vector2[]
-                {
-                    Vector3.up * 1.2f
+                    Vector3.up * 1.5f
                 });
         }
 
@@ -61,11 +55,11 @@ namespace Andromeda
             }
         }
 
-        private new void OnCollisionEnter2D(Collision2D collision)
+        private new void OnTriggerEnter2D(Collider2D collider)
         {
-            if (collision.gameObject.tag.Equals("Projectile"))
+            if (collider.gameObject.tag.Equals("Projectile"))
             {
-                var ammo = collision.gameObject.GetComponent<Projectile>().GetAmmoConfig;
+                var ammo = collider.gameObject.GetComponent<Projectile>().GetAmmoConfig;
                 _actor.HitPoints -= ammo.Damage;
 
                 // Check death
@@ -86,6 +80,5 @@ namespace Andromeda
 
             _hpSlider.value = _actor.HitPoints / _maxHp;
         }
-
     }
 }

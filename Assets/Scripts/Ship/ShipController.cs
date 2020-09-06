@@ -29,7 +29,7 @@ namespace Andromeda.Ship
         {
             _actor = new Actor(config);
 
-            if(hitParticles == null)
+            if (hitParticles == null)
             {
                 // Assign default
                 hitParticles = destroyedParticles;
@@ -52,11 +52,11 @@ namespace Andromeda.Ship
             transform.Rotate(Vector3.forward, rotation * Time.deltaTime);
         }
 
-        protected void OnCollisionEnter2D(Collision2D collision)
+        protected void OnTriggerEnter2D(Collider2D collider)
         {
-            if (collision.gameObject.tag.Equals("Projectile"))
+            if (collider.gameObject.tag.Equals("Projectile"))
             {
-                var ammo = collision.gameObject.GetComponent<Projectile>().GetAmmoConfig;
+                var ammo = collider.gameObject.GetComponent<Projectile>().GetAmmoConfig;
                 _actor.HitPoints -= ammo.Damage;
 
                 // Check death
@@ -81,6 +81,10 @@ namespace Andromeda.Ship
                     Instantiate(hitParticles, transform.position, Quaternion.identity);
                 }
             }
+        }
+
+        protected void OnCollisionEnter2D(Collision2D collision)
+        {
         }
 
         protected Queue<ACommand> actions = new Queue<ACommand>();
