@@ -15,6 +15,15 @@
 \usepackage{tgtermes}
 \usepackage{relsize}
 
+\usepackage{color}
+\usepackage{fifo-stack}
+\FSCreate{colors}{black}
+\makeatletter
+\let\old@color\color
+\renewcommand\color[1]{\FSPush{colors}{#1}\old@color{#1}}
+\newcommand\colorend{\FSPop{colors}\old@color{\FSTop{colors}}}
+\makeatother
+
 \usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{hyperref}
@@ -43,15 +52,25 @@
 
 % \fancyhead[LO]{\textsl{\leftmark}} for two sided
 \fancyhead[LO]{\rightmark \vspace{0.1cm}}
-\fancyhead[RO]{\leftmark \vspace{0.1cm}}
+% \fancyhead[RO]{\leftmark \vspace{0.1cm}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.6pt}
 \renewcommand{\footrulewidth}{0pt}
 
 % set APA citation style
-\usepackage{apacite}
+% \usepackage{apacite}
 \usepackage[numbib,notlof,nottoc, notlot]{tocbibind}
 \pagenumbering{gobble}
+
+% Reference management
+\usepackage[
+    backend=biber,
+    style=numeric,
+    sorting=ynt
+]{biblatex}
+\addbibresource{Bibliography.bib}
+
+\usepackage{svg}
 
 \hypersetup{pdfborder = {0 0 0}}
 
@@ -59,7 +78,7 @@
 %THESIS Parameters 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\thesisdate}{January, 2020}
+\newcommand{\thesisdate}{September, 2020}
 \newcommand{\thesisauthor}{Tojagi\'c Rastko} %input name
 \newcommand{\studentID}{999999999} %input student ID
 \newcommand{\thesistype}{
@@ -134,7 +153,6 @@ Informati\v{c}ki Projekat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %BIBLIOGRAPHY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\input{Template/References.tex}
+\printbibliography
 
 \end{document}
