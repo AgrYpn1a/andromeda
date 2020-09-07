@@ -43,11 +43,16 @@ Na primer, ne \v{z}elimo da neprijatelji prebrzo ispaljuju metke na igra\v{c}a, 
 vreme proteklo od prethodnog pucanja i proveriti da li je to vreme ve\'ce od neke konstante
 koja nam predstavlja minimalan vremenski interval izme\dj u dva pucnja.
 
-\emph{Time.deltaTime} je vreme za koje se izvr\v{s}io prethodni frejm. Ovo je jako bitna stavka,
-i potrebno nam je kada imamo bilo kakvo kretanje u igri. \color{red} ** TODO: Ubaciti grafik koji objasnjava vaznost mnozenja vrednosti kretanja sa deltatime **
+\emph{Time.deltaTime} ~\ref{fig:deltatime} je vreme za koje se izvr\v{s}io prethodni frejm. Ovo je jako bitna stavka,
+i potrebno nam je kada imamo bilo kakvu promenu stanja u igri koja je vidljiva (na primer, kretanje). 
 
-\colorend
-
+\begin{center}
+    \begin{figure}
+        \includegraphics[width=1\textwidth]{Figures/DeltaTime.pdf}
+        \caption{DeltaTime obja\v{s}njenje}
+        \label{fig:deltatime}
+    \end{figure}
+\end{center}
 
 \subsection{Obrasci (eng. design patterns)}
 \subsubsection{"Singleton" obrazac}

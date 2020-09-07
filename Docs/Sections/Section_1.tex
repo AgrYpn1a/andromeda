@@ -20,6 +20,7 @@ MonoBehaviour jeste \emph{GameObject}. Na GameObject je mogu\'ce dodati komponen
 na umu da ovakav sistem koji Unity pru\v{z}a nije pravi ECS (Entity Component System) te da zbog ovakvog
 dizajna cela platforma radi sporije. Unity od skoro uvodi pravi ECS uz \emph{Burst Compiler}, ali ovo jo\v{s} uvek 
 nije deo standardne platforme \cite{unitydocs}.
+
 \begin{center}
     \begin{figure}
         \includegraphics[width=0.7\textwidth]{Figures/mono_flowchart.pdf}
@@ -30,7 +31,7 @@ nije deo standardne platforme \cite{unitydocs}.
 
 \subsection{Unity Editor}
 
-Editor je grafi\v{c}ko okru\v{z}enje namenjeno za postavljanje sveta igre. Editor
+Editor ~\ref{fig:unityeditor} je grafi\v{c}ko okru\v{z}enje namenjeno za postavljanje sveta igre. Editor
 pru\v{z}a vizuelni pregled svih objekata na sceni, kamere i efekata. Prozor je podeljen
 na nekoliko potprozora \v{c}ije uloge su da olak\v{s}aju pode\v{s}avnja i pregled igre.
 
@@ -47,9 +48,15 @@ biti u roditelj-dete odnosu, te stoga i ime, jer tako \v{c}ine hijerarhiju.
 
 \emph{Game View} obi\v{c}no slo\v{z}en pored pregleda scene prikazuje svet igre
 onakav kakav \'ce biti prikazan igra\v{c}u, dakle bez pomo\'cnih elemenata poput 
-kvadratne mre\v{z}e ili mogu\'cnosti pomeranja objekata. \color{red}{** TODO ubaciti sliku editora **.}
+kvadratne mre\v{z}e ili mogu\'cnosti pomeranja objekata. 
 
-\colorend
+\begin{center}
+    \begin{figure}
+        \includegraphics[width=1\textwidth]{Figures/Editor.png}
+        \caption{Unity Editor}
+        \label{fig:unityeditor}
+    \end{figure}
+\end{center}
 
 % \label{sec:Intro}
 % ...

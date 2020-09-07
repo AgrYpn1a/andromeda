@@ -18,20 +18,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.1.4}Vremena, klasa Time}{5}{subsubsection.2.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Obrasci (eng. design patterns)}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Obrasci (eng. design patterns)}{6}{subsection.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}"Singleton" obrazac}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1}"Singleton" obrazac}{6}{subsubsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}"Command" obrazac}{5}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2}"Command" obrazac}{6}{subsubsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Andromeda - Svemirska puca\v {c}ina}{6}{section.3}%
+\contentsline {section}{\numberline {3}Andromeda - Svemirska puca\v {c}ina}{7}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}GameManager klasa}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}GameManager klasa}{7}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Kontrole}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Kontrole}{7}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Pona\v {s}anje svemirskog broda i ShipController klasa}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Pona\v {s}anje svemirskog broda i ShipController klasa}{7}{subsection.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Neprijatelji i osnovno pona\v {s}anje}{6}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}Neprijatelji i osnovno pona\v {s}anje}{7}{subsection.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Pobolj\v {s}anja i optimizacije}{6}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.5}Pobolj\v {s}anja i optimizacije}{7}{subsection.3.5}%
