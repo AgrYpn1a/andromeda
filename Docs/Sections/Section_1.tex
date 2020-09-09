@@ -29,6 +29,39 @@ nije deo standardne platforme \cite{unitydocs}.
     \end{figure}
 \end{center}
 
+\subsubsection{Scriptable Objects}
+\label{sec:scriptobj}
+\emph{ScriptableObject} je kontejner za skladi\v{s}tenje podataka, nezavisan od isntance klase. Oni omogu\'cavaju 
+u\v{s}tedu memorije za podatke koji su konfigurabilni i ne menjaju se tokom izvr\v{s}avanja igre. Na primer, konfiguracije
+poput ja\v{c}ine potiska, brzine okretanja i sli\v{c}no kod neprijateljskih brodova (kojih \'ce biti puno tokom igre).
+Tako\dj e ono \v{s}to je zgodno jeste da te podatke mo\v{z}emo da sa\v{c}uvamo kao fajl u projektu, i onda jednostavnim
+prevla\v{c}enjem u slot koristimo ~\ref{fig:scriptableslot}.
+
+\begin{center}
+    \begin{figure}
+        \includegraphics[width=1\textwidth]{Figures/ScriptableObjectSlot.png}
+        \caption{Slot for scriptable object}
+        \label{fig:scriptableslot}
+    \end{figure}
+\end{center}
+
+\subsubsection{Coroutines}
+\label{sec:coroutines}
+Korutine su specijalne funkcije povratnog tipa \emph{IEnumerator} \v{c}ije izvr\v{s}avanje 
+se mo\v{z}e pauzirati naredbom 
+
+\begin{verbatim}
+    yield return new WaitForSeconds(secs);
+
+    // ili
+
+    yield return null;
+\end{verbatim}
+
+gde ova druga pauzira izvr\v{s}avanje do slede\'ceg frejma. Korutine koristimo kada \v{z}elimo da se
+neka stvar de\v{s}ava tokom nekoliko frejmova, recimo \v{z}elimo da napravimo odlaganje kraja igre nakon
+uni\v{s}tenja svemirske baze (videti \ref{gamemanager}).
+
 \subsection{Unity Editor}
 
 Editor ~\ref{fig:unityeditor} je grafi\v{c}ko okru\v{z}enje namenjeno za postavljanje sveta igre. Editor
@@ -50,13 +83,11 @@ biti u roditelj-dete odnosu, te stoga i ime, jer tako \v{c}ine hijerarhiju.
 onakav kakav \'ce biti prikazan igra\v{c}u, dakle bez pomo\'cnih elemenata poput 
 kvadratne mre\v{z}e ili mogu\'cnosti pomeranja objekata. 
 
-\begin{center}
-    \begin{figure}
-        \includegraphics[width=1\textwidth]{Figures/Editor.png}
-        \caption{Unity Editor}
-        \label{fig:unityeditor}
-    \end{figure}
-\end{center}
+\begin{figure}[ht]
+    \centerline{\includegraphics[width=0.9\paperwidth]{Figures/Editor.png}}
+    \caption{Unity Editor}
+    \label{fig:unityeditor}
+\end{figure}
 
 % \label{sec:Intro}
 % ...

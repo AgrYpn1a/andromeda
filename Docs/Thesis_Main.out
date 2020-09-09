@@ -1,19 +1,21 @@
 \BOOKMARK [1][-]{section.1}{Platforma za razvoj igara Unity}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{MonoBehaviour i pisanje skripti u jeziku C\043}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Unity Editor}{section.1}% 3
-\BOOKMARK [1][-]{section.2}{Osnovni pojmovi i sistemi u igrama}{}% 4
-\BOOKMARK [2][-]{subsection.2.1}{Game Loop}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.1.1}{FPS}{subsection.2.1}% 6
-\BOOKMARK [3][-]{subsubsection.2.1.2}{Update}{subsection.2.1}% 7
-\BOOKMARK [3][-]{subsubsection.2.1.3}{FixedUpdate}{subsection.2.1}% 8
-\BOOKMARK [3][-]{subsubsection.2.1.4}{Vremena, klasa Time}{subsection.2.1}% 9
-\BOOKMARK [2][-]{subsection.2.2}{Obrasci \(eng. design patterns\)}{section.2}% 10
-\BOOKMARK [3][-]{subsubsection.2.2.1}{"Singleton" obrazac}{subsection.2.2}% 11
-\BOOKMARK [3][-]{subsubsection.2.2.2}{"Command" obrazac}{subsection.2.2}% 12
-\BOOKMARK [1][-]{section.3}{Andromeda - Svemirska pucacina}{}% 13
-\BOOKMARK [2][-]{subsection.3.1}{Pregled i ideja igre}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.2}{GameManager klasa}{section.3}% 15
-\BOOKMARK [2][-]{subsection.3.3}{Kontrole}{section.3}% 16
-\BOOKMARK [2][-]{subsection.3.4}{Pona\235anje svemirskog broda i ShipController klasa}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.5}{Neprijatelji i osnovno pona\235anje}{section.3}% 18
-\BOOKMARK [2][-]{subsection.3.6}{Pobolj\235anja i optimizacije}{section.3}% 19
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Scriptable Objects}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Coroutines}{subsection.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.2}{Unity Editor}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Osnovni pojmovi i sistemi u igrama}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Game Loop}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.1}{FPS}{subsection.2.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Update}{subsection.2.1}% 9
+\BOOKMARK [3][-]{subsubsection.2.1.3}{FixedUpdate}{subsection.2.1}% 10
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Vremena, klasa Time}{subsection.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.2}{Obrasci \(eng. design patterns\)}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.1}{"Singleton" obrazac}{subsection.2.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.2}{"Command" obrazac}{subsection.2.2}% 14
+\BOOKMARK [1][-]{section.3}{Andromeda - Svemirska pucacina}{}% 15
+\BOOKMARK [2][-]{subsection.3.1}{Pregled i ideja igre}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.2}{GameManager klasa}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.3}{Kontrole i InputManager}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.4}{Pona\235anje svemirskog broda i ShipController klasa}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.5}{Neprijatelji i osnovno pona\235anje}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.6}{Zakljucak}{section.3}% 21

@@ -79,52 +79,52 @@ Ostale prednosti kori\v{s}\'cenja ovog obrasca su:
 
 Primer implementacije Singleton obrasca koji nije thread-safe (lo\v{s}e)!
 \begin{verbatim}
-    public class Singleton
+public class Singleton
+{
+    private static Singleton _instance = null;
+
+    private Singleton() { }
+
+    public static Singleton Instance
     {
-        private static Singleton _instance = null;
-
-        private Singleton() { }
-
-        public static Singleton Instance
+        get
         {
-            get
+            if (_instance == null)
+            {
+                _instance = new Singleton();
+            }
+            
+            return _instance;
+        }
+    }
+}
+\end{verbatim}
+
+Jednostavna thread-safe implementacija:
+\begin{verbatim}
+public class Singleton
+{
+    private static Singleton _instance = null;
+    private static readonly object _root = new object();
+
+    Singleton() { }
+
+    public static Singleton Instance
+    {
+        get
+        {
+            lock (_root)
             {
                 if (_instance == null)
                 {
                     _instance = new Singleton();
                 }
-                
-                return _instance;
+
+                return instance;
             }
         }
     }
-\end{verbatim}
-
-Jednostavna thread-safe implementacija:
-\begin{verbatim}
-    public class Singleton
-    {
-        private static Singleton _instance = null;
-        private static readonly object _root = new object();
-
-        Singleton() { }
-
-        public static Singleton Instance
-        {
-            get
-            {
-                lock (_root)
-                {
-                    if (_instance == null)
-                    {
-                        _instance = new Singleton();
-                    }
-
-                    return instance;
-                }
-            }
-        }
-    }
+}
 \end{verbatim}
 
 U Unity platformi postoje situacije kada se neki problemi ne mogu re\v{s}iti pomo\'csu stati\v{c}kih klasa, 
@@ -145,78 +145,93 @@ u Unity platformi dodatno razlikuje, jer komponente koje su izvu\v{c}ene na scen
 /// </summary>
 public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
 {
-    private static T m_Instance = null;
-    public static T Instance
+private static T m_Instance = null;
+public static T Instance
+{
+    get
     {
-        get
-        {
-            // Instance requiered for the first time, we look for it
-            if (m_Instance == null)
-            {
-                m_Instance = GameObject.FindObjectOfType(typeof(T)) as T;
-
-                // Object not found, we create a temporary one
-                if (m_Instance == null)
-                {
-                    Debug.LogWarning("No instance of " + typeof(T).ToString() + ", a temporary one is created.");
-
-                    isTemporaryInstance = true;
-                    m_Instance = new GameObject("Temp Instance of " + typeof(T).ToString(), typeof(T)).GetComponent<T>();
-
-                    // Problem during the creation, this should not happen
-                    if (m_Instance == null)
-                    {
-                        Debug.LogError("Problem during the creation of " + typeof(T).ToString());
-                    }
-                }
-                if (!_isInitialized)
-                {
-                    _isInitialized = true;
-                    m_Instance.Init();
-                }
-            }
-            return m_Instance;
-        }
-    }
-
-    public static bool isTemporaryInstance { private set; get; }
-
-    private static bool _isInitialized;
-
-    // If no other monobehaviour request the instance in an awake function
-    // executing before this one, no need to search the object.
-    private void Awake()
-    {
+        // Instance requiered for the first time, we look for it
         if (m_Instance == null)
         {
-            m_Instance = this as T;
+            m_Instance = GameObject
+                        .FindObjectOfType(typeof(T)) as T;
+
+            // Object not found, we create a temporary one
+            if (m_Instance == null)
+            {
+                Debug.LogWarning("No instance of " + 
+                    typeof(T).ToString() + 
+                    ", a temporary one is created.");
+
+                isTemporaryInstance = true;
+                m_Instance = new GameObject("Temp Instance of " + 
+                    typeof(T).ToString(), typeof(T))
+                    .GetComponent<T>();
+
+                // Problem during the creation, 
+                // this should not happen
+                if (m_Instance == null)
+                {
+                    Debug
+                    .LogError("Problem during the creation of " + 
+                        typeof(T).ToString());
+                }
+            }
+            if (!_isInitialized)
+            {
+                _isInitialized = true;
+                m_Instance.Init();
+            }
         }
-        else if (m_Instance != this)
-        {
-            Debug.LogError("Another instance of " + GetType() + " is already exist! Destroying self...");
-            DestroyImmediate(this);
-            return;
-        }
-        if (!_isInitialized)
-        {
-            DontDestroyOnLoad(gameObject);
-            _isInitialized = true;
-            m_Instance.Init();
-        }
+        return m_Instance;
     }
+}
 
+public static bool isTemporaryInstance { private set; get; }
 
-    /// <summary>
-    /// This function is called when the instance is used the first time
-    /// Put all the initializations you need here, as you would do in Awake
-    /// </summary>
-    public virtual void Init() { }
+private static bool _isInitialized;
 
-    /// Make sure the instance isn't referenced anymore when the user quit, just in case.
-    private void OnApplicationQuit()
+// If no other monobehaviour request 
+// the instance in an awake function
+// executing before this one, 
+// no need to search the object.
+private void Awake()
+{
+    if (m_Instance == null)
     {
-        m_Instance = null;
+        m_Instance = this as T;
     }
+    else if (m_Instance != this)
+    {
+        Debug.LogError("Another instance of " + GetType() + 
+            " is already exist! Destroying self...");
+        DestroyImmediate(this);
+        return;
+    }
+    if (!_isInitialized)
+    {
+        DontDestroyOnLoad(gameObject);
+        _isInitialized = true;
+        m_Instance.Init();
+    }
+}
+
+
+/// <summary>
+/// This function is called when 
+/// the instance is used the first time
+/// Put all the initializations you need here,
+/// as you would do in Awake
+/// </summary>
+public virtual void Init() { }
+
+/// Make sure the instance 
+/// isn't referenced anymore when the 
+/// user quit, just in case.
+private void OnApplicationQuit()
+{
+    m_Instance = null;
+}
 }
 \end{verbatim}
 
@@ -239,34 +254,33 @@ Ukoliko \v{z}elimo da druga\v{c}ije mapiramo komande, \v{s}to je vrlo \v{c}est s
 kroz konfiguracioni meni. Za na\v{s}e potrebe napravi\'cemo apstraktnu klasu \emph{ACommand}.
 
 \begin{verbatim}
-    
-    public abstract class ACommand
+public abstract class ACommand
+{
+    public KeyState State { get; set; }
+    public bool IsPhysics { get; private set; }
+
+    public ACommand(bool isPhysics)
     {
-        public KeyState State { get; set; }
-        public bool IsPhysics { get; private set; }
-
-        public ACommand(bool isPhysics)
-        {
-            IsPhysics = IsPhysics;
-        }
-
-        public abstract void Execute(ShipController ship, Actor actor);
+        IsPhysics = IsPhysics;
     }
+
+    public abstract void Execute(ShipController ship, Actor actor);
+}
 \end{verbatim}
 
 Dalje prema potebama nasle\dj ujemo ovu klasu i defini\v{s}emo konkretna pona\v{s}anja. Na primer,
 dodavanje potiska:
 
 \begin{verbatim}
-    public sealed class Thrust : ACommand
-    {
-        public Thrust() : base(true) { }
+public sealed class Thrust : ACommand
+{
+    public Thrust() : base(true) { }
 
-        public override void Execute(ShipController ship, Actor actor)
-        {
-            ship.AddThrust(ship.transform.up, actor.ThrustPower);
-        }
+    public override void Execute(ShipController ship, Actor actor)
+    {
+        ship.AddThrust(ship.transform.up, actor.ThrustPower);
     }
+}
 \end{verbatim}
 
 Ove komande se onda pakuju u neku strukturu, u na\v{s}em slu\v{c}aju koristimo \emph{Queue}, 
@@ -297,10 +311,14 @@ akcije u niz akcija. Na primer, kretanje prema igra\v{c}u:
 Na drugoj strani, kod igra\v{c}a, defini\v{s}emo akcije kao mapu:
 
 \begin{verbatim}
-    InputManager.Instance.InputMap[KeyCode.UpArrow] = new Thrust();
-    InputManager.Instance.InputMap[KeyCode.LeftArrow] = new Rotate(1);
-    InputManager.Instance.InputMap[KeyCode.RightArrow] = new Rotate(-1);
-    InputManager.Instance.InputMap[KeyCode.LeftControl] = new Shoot(AmmoType.DEFAULT,
+InputManager.Instance.InputMap[KeyCode.UpArrow] = 
+    new Thrust();
+InputManager.Instance.InputMap[KeyCode.LeftArrow] = 
+    new Rotate(1);
+InputManager.Instance.InputMap[KeyCode.RightArrow] = 
+    new Rotate(-1);
+InputManager.Instance.InputMap[KeyCode.LeftControl] = 
+    new Shoot(AmmoType.DEFAULT,
         new Vector2[]
         {
             Vector3.up * 1.5f
