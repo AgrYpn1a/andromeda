@@ -24,20 +24,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Obrasci (eng. design patterns)}{7}{subsection.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}"Singleton" obrazac}{9}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1}"Singleton" obrazac}{7}{subsubsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.2}"Command" obrazac}{13}{subsubsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Andromeda - Svemirska puca\v {c}ina}{17}{section.3}%
+\contentsline {section}{\numberline {3}Andromeda - Svemirska puca\v {c}ina}{16}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Pregled i ideja igre}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Pregled i ideja igre}{16}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}GameManager klasa}{17}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}GameManager klasa}{16}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Kontrole i InputManager}{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Kontrole i InputManager}{19}{subsection.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Pona\v {s}anje svemirskog broda i ShipController klasa}{22}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}Pona\v {s}anje svemirskog broda i ShipController klasa}{21}{subsection.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Neprijatelji i osnovno pona\v {s}anje}{26}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.5}Neprijatelji i osnovno pona\v {s}anje}{24}{subsection.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Zaklju\v {c}ak}{28}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.6}Zaklju\v {c}ak}{27}{subsection.3.6}%
