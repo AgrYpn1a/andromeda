@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is 'Thesis_Main.blg'
-[93] biber-MSWIN64:322> INFO - === 
-[119] Biber.pm:415> INFO - Reading 'Thesis_Main.bcf'
-[259] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
-[279] Biber.pm:4256> INFO - Processing section 0
-[280] Utils.pm:75> INFO - Globbing data source 'Bibliography.bib'
-[291] Utils.pm:91> INFO - Globbed data source 'Bibliography.bib' to Bibliography.bib
-[309] Biber.pm:4455> INFO - Looking for bibtex format file 'Bibliography.bib' for section 0
-[313] bibtex.pm:1653> INFO - LaTeX decoding ...
-[331] bibtex.pm:1471> INFO - Found BibTeX data source 'Bibliography.bib'
-[354] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[354] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[354] Biber.pm:4084> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[355] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[357] bbl.pm:652> INFO - Writing 'Thesis_Main.bbl' with encoding 'UTF-8'
-[358] bbl.pm:755> INFO - Output to Thesis_Main.bbl
+[124] biber-MSWIN64:322> INFO - === 
+[149] Biber.pm:415> INFO - Reading 'Thesis_Main.bcf'
+[283] Biber.pm:943> INFO - Found 2 citekeys in bib section 0
+[305] Biber.pm:4256> INFO - Processing section 0
+[306] Utils.pm:75> INFO - Globbing data source 'Bibliography.bib'
+[317] Utils.pm:91> INFO - Globbed data source 'Bibliography.bib' to Bibliography.bib
+[337] Biber.pm:4455> INFO - Looking for bibtex format file 'Bibliography.bib' for section 0
+[341] bibtex.pm:1653> INFO - LaTeX decoding ...
+[354] bibtex.pm:1471> INFO - Found BibTeX data source 'Bibliography.bib'
+[427] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[427] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[427] Biber.pm:4084> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[428] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[430] bbl.pm:652> INFO - Writing 'Thesis_Main.bbl' with encoding 'UTF-8'
+[432] bbl.pm:755> INFO - Output to Thesis_Main.bbl

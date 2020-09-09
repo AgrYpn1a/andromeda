@@ -19,6 +19,31 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global}
+    \entry{gameprog}{book}{}
+      \name{author}{1}{}{%
+        {{hash=26313e6493577f16e529ef2698d1a15c}{%
+           family={Nystrom},
+           familyi={N\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Genever Benning}%
+      }
+      \strng{namehash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{fullhash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{bibnamehash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{authorbibnamehash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{authornamehash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{authorfullhash}{26313e6493577f16e529ef2698d1a15c}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0990582906}
+      \field{title}{Game Programming Patterns}
+      \field{year}{2014}
+    \endentry
     \entry{unitydocs}{book}{}
       \name{author}{1}{}{%
         {{hash=82dd98f1d663acc318e6a8ec4ab69b7a}{%

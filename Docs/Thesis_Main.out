@@ -11,8 +11,9 @@
 \BOOKMARK [3][-]{subsubsection.2.2.1}{"Singleton" obrazac}{subsection.2.2}% 11
 \BOOKMARK [3][-]{subsubsection.2.2.2}{"Command" obrazac}{subsection.2.2}% 12
 \BOOKMARK [1][-]{section.3}{Andromeda - Svemirska pucacina}{}% 13
-\BOOKMARK [2][-]{subsection.3.1}{GameManager klasa}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.2}{Kontrole}{section.3}% 15
-\BOOKMARK [2][-]{subsection.3.3}{Pona\235anje svemirskog broda i ShipController klasa}{section.3}% 16
-\BOOKMARK [2][-]{subsection.3.4}{Neprijatelji i osnovno pona\235anje}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.5}{Pobolj\235anja i optimizacije}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.1}{Pregled i ideja igre}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.2}{GameManager klasa}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.3}{Kontrole}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.4}{Pona\235anje svemirskog broda i ShipController klasa}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.5}{Neprijatelji i osnovno pona\235anje}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.6}{Pobolj\235anja i optimizacije}{section.3}% 19
